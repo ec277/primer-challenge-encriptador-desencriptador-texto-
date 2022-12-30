@@ -118,6 +118,16 @@ textarea {
     
 }
 
+.otra{
+    width: 5%;
+    margin: auto;
+    margin-top: -20px;
+    cursor: pointer;
+
+    
+
+}
+
 .boton-encriptar{
     width: 25%;
     border-radius: 5px;
@@ -171,7 +181,12 @@ textarea {
         display: none;
     }
     
-    #copiar{
+    #copy{
+
+        display: none;
+    }
+
+    #nuevo{
 
         display: none;
     }
@@ -240,6 +255,13 @@ footer{
     border-radius: 3px;
     box-shadow: 2px 2px 2px 1px #11043a;
     
+}
+
+.otra{
+    width: 5%;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
 }
   .section-right{
     width: 100%;
