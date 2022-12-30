@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptar texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <img class="logo-img header-img" src="./img/logo.png" alt="imagen logo" >
+        </div>
+        <h1 class="header-titulo">Aplicación para encriptar texto</h1>
+    </header>
+    <main class="contenedor-principal">
+       
+        <section class="section-left">
+            <input id="input_texto" autofocus placeholder="ingresar texto" class="input-text"></input>
+            <hr class="linea-inferior">
+            
+        </section>
+
+        <section class="section-right">
+            <img src="./img/Muñeco.png" alt="imagen" id="img" class="section-img">
+            <textarea id="texto2" name="" cols="50" rows="8"></textarea>
+            <button id="copiar" class="boton-copiar" onclick="copiar()">Copiar</button>
+        </section>
+
+        <div class="boton">
+            <button type="button" id="btn-encriptar"  class="boton-encriptar">Encriptar</button>
+            <button type="button" id="btn-desencriptar" class="boton-desencriptar">Desencriptar</button>
+        </div>
+            
+        <!-- onclick="encriptarTexto()"-->
+        <!-- onclick="desencriptarTexto()"-->
+       
+
+    </main>
+    <footer>
+        <p class="footer">Desarrollador &copy René Everardo Contreras Arias</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
