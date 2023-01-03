@@ -349,3 +349,28 @@ footer{
 
 }
 
+@media screen and (max-width:820px) {
+
+    .contenedor-principal{
+
+        width: 100%;
+    }
+
+    .botones {
+
+        width: 40%;
+    }
+
+    .logo {
+
+        margin-left: 25px;
+    }
+
+    textarea {
+
+        width: 100%;
+        background-color: white;
+    }
+
+}
+
