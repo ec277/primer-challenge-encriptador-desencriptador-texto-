@@ -1,27 +1,38 @@
 
-
+  function vaciarInput() {
+    document.getElementById("input_text").value = "";
+  }
+    
+  
 /* función para encriptar texto */
 function encryptText(){
-    const text = document.getElementById("input_text").value.toLowerCase();
-
-    if (text == "") { 
-  
-        alert(" Ingresa texto para encriptar");
+    let lowercaseLetter = /^[a-zñ\s]+$/g;
     
-    } else {
+    const text = document.getElementById("input_text").value;
+
+ 
+    if (text == "" ) { 
+        
+        alert(" Ingresa algún texto para encriptar");
+    
+    } else if (text.match(lowercaseLetter) == null) {
+        alert("Ingresa solo letras minúsculas y sin acentos");
+        vaciarInput();
+    }
+    else {
         let encryptedText = text.replace(/e/igm, "enter");
-        encryptedText = text.replace(/é/igm, "enter");
+       
         encryptedText = encryptedText.replace(/o/igm, "ober");
-        encryptedText = encryptedText.replace(/ó/igm, "ober");
+       
         encryptedText = encryptedText.replace(/i/igm, "imes");
-        encryptedText = encryptedText.replace(/í/igm, "imes");
+       
         encryptedText = encryptedText.replace(/a/igm, "ai");
-        encryptedText = encryptedText.replace(/á/igm, "ai");
+       
         encryptedText = encryptedText.replace(/u/igm, "ufat");
-        encryptedText = encryptedText.replace(/ú/igm, "ufat");
+       
 
         document.getElementById("img").style.display = "none";
-       
+        document.getElementById("aviso").style.display = "none";
        document.getElementById("texto2").style.display = "show";
        document.getElementById("texto2").style.display = "inherit";
        document.getElementById("texto2").innerHTML = encryptedText;
@@ -32,7 +43,7 @@ function encryptText(){
        
     }
 
-}
+} 
 
 const btnEncrypt = document.getElementById("btn-encrypt");
 btnEncrypt.addEventListener("click", encryptText);
@@ -48,14 +59,10 @@ function decryptText(){
     } else {
 
         let decryptedText = text.replace(/enter/igm, "e");
-        decryptedText = text.replace(/enter/igm, "é");
         decryptedText = decryptedText.replace(/ober/igm, "o");
         decryptedText = decryptedText.replace(/imes/igm, "i");
         decryptedText = decryptedText.replace(/ai/igm, "a");
         decryptedText = decryptedText.replace(/ufat/igm, "u");
-        decryptedText = decryptedText.replace(/ufat/igm, "ú");
-
-      
         document.getElementById("texto2").innerHTML = decryptedText;
         
 
@@ -91,8 +98,10 @@ btnCopy.addEventListener("click", copyText);
     this.value = '';
   });
 
-/* nueva palabra */
+  
 
+/* nueva palabra */
+/*
     const btnNew = document.getElementById('nuevo');
     btnNew.addEventListener('click', function() {
     
@@ -102,4 +111,19 @@ btnCopy.addEventListener("click", copyText);
     document.getElementById("img").style.display = "show";
     document.getElementById("img").style.display = "inherit";
     });
+*/
+    function newText() {
+        document.getElementById("input_text").value = "";
+        document.getElementById("texto2").style.display = "none";
+        document.getElementById("copy").style.display = "none";
+        document.getElementById("img").style.display = "show";
+        document.getElementById("img").style.display = "inherit";
+        document.getElementById("aviso").style.display = "show";
+        document.getElementById("aviso").style.display = "inherit";
+        
+    }
+
+    const btnNew2 = document.getElementById('nuevo');
+    btnNew2.addEventListener('click', newText);
          
+    

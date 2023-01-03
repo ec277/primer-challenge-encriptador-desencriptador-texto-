@@ -43,6 +43,8 @@ header {
     margin: 10px auto;
     width: 100%;
     padding: 10px;
+    border-radius: 12px;
+   /* box-shadow: 2px 2px 2px 1px #11043a;*/
 }
 
 .header-titulo{
@@ -73,6 +75,17 @@ header {
     
 }
 
+.info {
+   /* display: flex; */
+   /* align-items: center; */
+    font-size: 14px;
+    color: #11043a;
+    gap: 8px;
+}
+.info img {
+    width: 15px;
+}
+
 .input-text{
     width: 80%;
     height: 40px;
@@ -88,11 +101,11 @@ header {
 
 .section-right{
     width: 30%;
-    height: 230px;
+    height: auto;
     float: right;
     border-radius: 8px;
-  /*  box-shadow: 2px 2px 2px 1px #11043a; */
-  /*  background: #e5e2e2; */
+   box-shadow: 2px 2px 2px 1px #11043a;
+    background: white; 
 }
 
 textarea {
@@ -118,17 +131,22 @@ textarea {
     
 }
 
-.otra{
+.arrow{
     width: 5%;
     margin: auto;
     margin-top: -20px;
+    transition: 1s all;
     cursor: pointer;
 
     
 
 }
 
-.boton-encriptar{
+.arrow:hover{
+    transform: scale(1.2);
+}
+
+.botones{
     width: 25%;
     border-radius: 5px;
     border: 1px solid #11043a;
@@ -137,7 +155,14 @@ textarea {
     font-size: 20px;
     color: #e5e2e2;
     background: #11043a;
+    transition: 1s all;
     cursor: pointer;
+}
+
+.botones:hover{
+    background: #e5e2e2;
+    color: #11043a;
+    transform: scale(1.1);
 }
 
 .boton-desencriptar{
@@ -161,9 +186,15 @@ textarea {
     font-size: 20px;
     color: #e5e2e2;
     background: #11043a;
+    transition: 1s all;
     cursor: pointer;
 }
 
+.boton-copiar:hover{
+    background: #e5e2e2;
+    color: #11043a;
+    transform: scale(1.1);
+}
 
 .left-boton {
 
@@ -240,6 +271,7 @@ footer{
     .contenedor-principal{
         display: flex;
         width:100%;
+        height: auto;
         display: flex;
         text-align: center;
         flex-direction: column;
@@ -257,7 +289,22 @@ footer{
     
 }
 
-.otra{
+.input-text{
+    margin-top: 25px;
+}
+
+.section-right{
+    width: 100%;
+    height: 30%;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 1px #11043a;
+    background: #e5e2e2;   
+    margin-top: 25px; 
+}
+
+
+
+.arrow{
     width: 5%;
     margin: auto;
     margin-top: 20px;
@@ -281,13 +328,12 @@ footer{
     
   }
 
-    .boton-encriptar{
+    .botones{
         width: 40%; 
+        margin: 30px auto;
     }
 
-    .boton-desencriptar{
-        width: 40%;
-    }
+    
 
   .boton-copiar{
     width: 80%;
