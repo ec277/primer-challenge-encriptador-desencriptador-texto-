@@ -13,10 +13,25 @@ function encryptText(){
  
     if (text == "" ) { 
         
-        alert(" Ingresa algún texto para encriptar");
+        
+
+        Swal.fire({
+            icon: 'info',
+            title: 'Atenciòn',
+            text: ' Ingresa algún texto para encriptar',
+           
+          })
     
     } else if (text.match(lowercaseLetter) == null) {
-        alert("Ingresa solo letras minúsculas y sin acentos");
+       
+
+       Swal.fire({
+        icon: 'warning',
+        title: 'Atenciòn',
+        text: 'Ingresa solo letras minúsculas y sin acentos',
+       
+      })
+
         vaciarInput();
     }
     else {
@@ -33,13 +48,13 @@ function encryptText(){
 
         document.getElementById("img").style.display = "none";
         document.getElementById("aviso").style.display = "none";
-       document.getElementById("texto2").style.display = "show";
-       document.getElementById("texto2").style.display = "inherit";
-       document.getElementById("texto2").innerHTML = encryptedText;
-       document.getElementById("copy").style.display = "show";
-       document.getElementById("copy").style.display = "inherit";
-       document.getElementById("nuevo").style.display = "show";
-       document.getElementById("nuevo").style.display = "inherit";
+        document.getElementById("texto2").style.display = "show";
+        document.getElementById("texto2").style.display = "inherit";
+        document.getElementById("texto2").innerHTML = encryptedText;
+        document.getElementById("copy").style.display = "show";
+        document.getElementById("copy").style.display = "inherit";
+        document.getElementById("nuevo").style.display = "show";
+        document.getElementById("nuevo").style.display = "inherit";
        
     }
 
@@ -54,7 +69,13 @@ function decryptText(){
 
     if (text == "") { 
   
-        alert("Ingresa texto para desencriptar");
+        
+
+        Swal.fire({
+            icon: 'info',
+            title: 'Atenciòn',
+            text: 'Ingresa texto para desencriptar',
+          })
     
     } else {
 
@@ -65,7 +86,6 @@ function decryptText(){
         decryptedText = decryptedText.replace(/ufat/igm, "u");
         document.getElementById("texto2").innerHTML = decryptedText;
         
-
     }
 }
 
@@ -79,8 +99,13 @@ function copyText(){
     content.select();
     
    navigator.clipboard.writeText(content.value);
-   // document.execCommand("copy");
-    alert("Texto copiado");
+   
+   
+
+   Swal.fire({
+    icon: 'success',
+    text: 'El texto fue copiado !',
+  })
 
     text.value = "";
     
@@ -100,21 +125,10 @@ btnCopy.addEventListener("click", copyText);
 
   
 
-/* nueva palabra */
-/*
-    const btnNew = document.getElementById('nuevo');
-    btnNew.addEventListener('click', function() {
-    
-    document.getElementById("input_text").value = " ";
-    document.getElementById("texto2").style.display = "none";
-    document.getElementById("copy").style.display = "none";
-    document.getElementById("img").style.display = "show";
-    document.getElementById("img").style.display = "inherit";
-    });
-*/
     function newText() {
         document.getElementById("input_text").value = "";
         document.getElementById("texto2").style.display = "none";
+        document.getElementById("nuevo").style.display = "none";
         document.getElementById("copy").style.display = "none";
         document.getElementById("img").style.display = "show";
         document.getElementById("img").style.display = "inherit";
