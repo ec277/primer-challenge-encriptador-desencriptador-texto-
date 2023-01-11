@@ -13,21 +13,18 @@ function encryptText(){
  
     if (text == "" ) { 
         
-        
-
         Swal.fire({
             icon: 'info',
-            title: 'Atenciòn',
+            title: 'Atención',
             text: ' Ingresa algún texto para encriptar',
            
           })
     
     } else if (text.match(lowercaseLetter) == null) {
        
-
        Swal.fire({
         icon: 'warning',
-        title: 'Atenciòn',
+        title: 'Atención',
         text: 'Ingresa solo letras minúsculas y sin acentos',
        
       })
@@ -45,7 +42,6 @@ function encryptText(){
        
         encryptedText = encryptedText.replace(/u/igm, "ufat");
        
-
         document.getElementById("img").style.display = "none";
         document.getElementById("aviso").style.display = "none";
         document.getElementById("texto2").style.display = "show";
@@ -69,11 +65,9 @@ function decryptText(){
 
     if (text == "") { 
   
-        
-
         Swal.fire({
             icon: 'info',
-            title: 'Atenciòn',
+            title: 'Atención',
             text: 'Ingresa texto para desencriptar',
           })
     
@@ -100,8 +94,6 @@ function copyText(){
     
    navigator.clipboard.writeText(content.value);
    
-   
-
    Swal.fire({
     icon: 'success',
     text: 'El texto fue copiado !',
@@ -109,12 +101,10 @@ function copyText(){
 
     text.value = "";
     
-
 }
 
 const btnCopy = document.getElementById("copy");
 btnCopy.addEventListener("click", copyText);
-
 
 /* vaciar input */
 
@@ -124,7 +114,6 @@ btnCopy.addEventListener("click", copyText);
   });
 
   
-
     function newText() {
         document.getElementById("input_text").value = "";
         document.getElementById("texto2").style.display = "none";
