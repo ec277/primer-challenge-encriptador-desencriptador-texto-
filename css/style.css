@@ -6,8 +6,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: beige;
+    
     font-family: 'Montserrat', sans-serif;
     background: #e0dddd;
+   
 }
 
 header {
@@ -53,7 +55,7 @@ header {
 }
 
 .contenedor-principal{
-
+     
     width: 940px;
     height: 460px;
     margin: 0 auto;
@@ -63,6 +65,7 @@ header {
     text-align: center;
    /* box-shadow: 2px 2px 2px 1px #11043a; */
     border: 2px solid black;
+    
 }
 
 .section-left{
@@ -96,7 +99,9 @@ header {
     margin: 35px;
     font-size: 20px;
     color: #11043a;
-   background-color: #e0dddd;
+  /* background-color: #e0dddd; */
+   resize: none;
+   background: transparent;
 }
 
 .section-right{
@@ -333,6 +338,7 @@ footer{
     .botones{
         width: 40%; 
         margin: 30px auto;
+        font-size: 15px;
     }
 
     
