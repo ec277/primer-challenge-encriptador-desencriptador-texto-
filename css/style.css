@@ -20,6 +20,11 @@ header {
     text-align: center;
     font-size: 30px;
     padding: 15px;
+    background:-webkit-radial-gradient(200px top, ellipse, #312f2f, #1162ac, black);
+    background:-ms-radial-gradient(200px top, ellipse, #312f2f, #1162ac, black);
+    background:-moz-radial-gradient(200px top, ellipse, #312f2f, #1162ac, black);
+    background:-o-radial-gradient(200px top, ellipse, #312f2f, #1162ac, black);
+
 }
 
 .logo{
@@ -243,6 +248,11 @@ footer{
         text-align: center;
         font-size: 20px;
         padding: 10px;
+        background:-webkit-radial-gradient(center center, circle, black, #1162ac);
+        background:-moz-radial-gradient(center center, circle, black, #1162ac);
+        background:-ms-radial-gradient(center center, circle, black, #1162ac);
+        background:-o-radial-gradient(center center, circle, black, #1162ac);
+        color: beige;
 
         
 
