@@ -215,6 +215,7 @@ textarea {
     #texto2{
 
         display: none;
+        resize: none;
     }
     
     #copy{
